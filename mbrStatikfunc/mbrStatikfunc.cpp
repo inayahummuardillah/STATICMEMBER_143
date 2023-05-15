@@ -29,3 +29,20 @@ void mahasiswa::prinAll() {
 	cout << "Nama = " << nama << endl;
 	cout << endl;
 }
+
+int main() {
+	mahasiswa mhs1("Sri Dadi");
+	mahasiswa mhs2("Budi Jatmiko");
+	mahasiswa::setNim(9); //mengakses nilai melalui static number function "setNim"
+	mahasiswa mhs3("Andi Janu");
+	mahasiswa mhs4("Joko Wahono");
+
+	mhs1.prinAll();
+	mhs2.prinAll();
+	mhs3.prinAll();
+	mhs4.prinAll();
+
+	cout << "akses dari luar object = " << mahasiswa::getNim() << endl; //mengakses nim melalui static member function "getNim"
+
+		return 0;
+}
